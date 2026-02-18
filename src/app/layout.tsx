@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Ricardo Morataya Portfolio",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.svg",
         width: 1200,
         height: 630,
         alt: "Ricardo Morataya - Software Architect",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ricardo Morataya — Aspiring Software Architect",
     description: "Building scalable systems and clean architectures. 6+ years across healthcare, compliance, and gaming.",
-    images: ["/og-image.png"],
+    images: ["/og-image.svg"],
   },
   robots: {
     index: true,
