@@ -19,6 +19,9 @@ export function BlogCard({ post }: BlogCardProps) {
       <div className="space-y-3 pt-1 flex-1">
         <div className="flex items-center gap-2">
           <time className="font-mono text-[10px] text-muted-foreground">{formattedDate}</time>
+          <span className="inline-flex items-center rounded border border-border bg-muted/50 px-1.5 py-0.5 font-mono text-[9px] text-muted-foreground">
+            {post.language}
+          </span>
         </div>
         <h3 className="font-heading text-lg font-semibold leading-snug">{post.title}</h3>
         <p className="text-sm text-muted-foreground leading-relaxed">

@@ -24,7 +24,7 @@ export function Footer() {
         </div>
         <div className="mt-6 text-center">
           <p className="font-mono text-[10px] text-muted-foreground/50">
-            © {new Date().getFullYear()} Ricardo Morataya // Designed & architected with care
+            © {new Date().getFullYear()} Ricardo Morataya // Engineered with intention
           </p>
         </div>
       </div>

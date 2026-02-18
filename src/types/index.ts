@@ -27,6 +27,7 @@ export interface BlogPost {
   tags: string[];
   readMoreUrl: string;
   content: string;
+  language: "EN" | "ES";
 }
 
 export interface SocialLink {
