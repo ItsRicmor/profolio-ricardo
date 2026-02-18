@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
+import { BaseCard } from "@/components/ui/base-card";
 import type { Project } from "@/types";
 
 interface ProjectCardProps {
@@ -8,13 +9,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="group relative flex flex-col rounded-lg border border-dashed border-primary/20 bg-card p-5 transition-all hover:border-primary/40 hover:shadow-md h-full">
-      {/* Component label */}
-      <div className="absolute -top-2.5 left-4 bg-background px-2">
-        <span className="font-mono text-[9px] text-primary/50 tracking-wider uppercase">
-          {"<"}Component{" />"}
-        </span>
-      </div>
+    <BaseCard label="<Component />">
 
       {project.image && (
         <div className="overflow-hidden rounded border border-border mb-3 relative h-36">
@@ -57,6 +52,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </a>
         </div>
       )}
-    </div>
+    </BaseCard>
   );
 }

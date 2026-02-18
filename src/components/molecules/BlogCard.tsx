@@ -1,4 +1,5 @@
 import { ExternalLink } from "lucide-react";
+import { BaseCard } from "@/components/ui/base-card";
 import type { BlogPost } from "@/types";
 
 interface BlogCardProps {
@@ -13,13 +14,7 @@ export function BlogCard({ post }: BlogCardProps) {
   });
 
   return (
-    <div className="group relative flex flex-col rounded-lg border border-dashed border-primary/20 bg-card p-5 transition-all hover:border-primary/40 hover:shadow-md h-full">
-      {/* Component label */}
-      <div className="absolute -top-2.5 left-4 bg-background px-2">
-        <span className="font-mono text-[9px] text-primary/50 tracking-wider uppercase">
-          {"<"}Post {"/>"}
-        </span>
-      </div>
+    <BaseCard label="<Post />">
 
       <div className="space-y-3 pt-1 flex-1">
         <div className="flex items-center gap-2">
@@ -52,6 +47,6 @@ export function BlogCard({ post }: BlogCardProps) {
           <ExternalLink className="h-3 w-3" /> read_on_medium
         </a>
       </div>
-    </div>
+    </BaseCard>
   );
 }

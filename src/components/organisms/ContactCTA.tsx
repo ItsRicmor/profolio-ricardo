@@ -19,8 +19,8 @@ export function ContactCTA() {
         />
 
         {/* Corner brackets */}
-        <div className="absolute left-3 w-4 h-4 border-t border-l border-primary/20" style={{ top: '-4px' }} />
-        <div className="absolute right-3 w-4 h-4 border-t border-r border-primary/20" style={{ top: '-4px' }} />
+        <div className="absolute left-3 w-4 h-4 border-t border-l border-primary/20" style={{ top: '-6px' }} />
+        <div className="absolute right-3 w-4 h-4 border-t border-r border-primary/20" style={{ top: '-6px' }} />
         <div className="absolute bottom-3 left-3 w-4 h-4 border-b border-l border-primary/20" />
         <div className="absolute bottom-3 right-3 w-4 h-4 border-b border-r border-primary/20" />
 
@@ -30,7 +30,7 @@ export function ContactCTA() {
         <h2 className="relative font-heading text-2xl font-bold tracking-tight md:text-3xl lg:text-4xl">
           Got an idea? Let&apos;s architect it.
         </h2>
-        <p className="relative text-sm text-muted-foreground max-w-md">
+        <p className="relative text-sm text-muted-foreground max-w-2xl mx-auto text-center">
           I&apos;m always open to discussing software architecture, clean code practices, or potential collaborations.
           Whether you&apos;re looking to build something great or just want to connect, I&apos;d love to hear from you.
         </p>
