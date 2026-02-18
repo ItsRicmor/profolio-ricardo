@@ -16,17 +16,20 @@ export function ExperienceItem({ experience, index }: ExperienceItemProps) {
     <div
       ref={ref}
       className={cn(
-        "relative pl-8 pb-10 last:pb-0 border-l border-dashed border-primary/20 transition-all duration-600 ease-out",
+        "relative pl-12 pb-10 last:pb-0 border-l-0 transition-all duration-600 ease-out",
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
       )}
     >
       {/* Node with index */}
-      <div className="absolute -left-[13px] top-0 flex items-center justify-center h-6 w-6 rounded-md border border-primary/30 bg-background">
+      <div className="absolute left-0 top-0 flex items-center justify-center h-6 w-6 rounded-md border border-primary/30 bg-background">
         <span className="font-mono text-[9px] text-primary font-bold">{String(index).padStart(2, '0')}</span>
       </div>
 
+      {/* Vertical line */}
+      <div className="absolute left-3 top-6 bottom-0 w-px border-l border-dashed border-primary/20" />
+      
       {/* Horizontal connector line */}
-      <div className="absolute left-[13px] top-[11px] w-3 h-px bg-primary/20" />
+      <div className="absolute left-6 top-[11px] w-6 h-px bg-primary/20" />
 
       <div className="space-y-1.5">
         <div className="flex items-baseline gap-2 flex-wrap">
