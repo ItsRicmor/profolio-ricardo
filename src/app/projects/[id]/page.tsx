@@ -5,7 +5,7 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { projects } from "@/data/projects";
 import { Navbar } from "@/components/organisms/Navbar";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Github, ExternalLink } from "lucide-react";
 import { notFound } from "next/navigation";
 
 const Footer = lazy(() => import("@/components/organisms/Footer").then(m => ({ default: m.Footer })));
@@ -48,6 +48,33 @@ export default function ProjectPlayPage({ params }: { params: Promise<{ id: stri
             <div>
               <h1 className="font-heading text-3xl md:text-4xl font-bold">{project.title}</h1>
               <p className="text-muted-foreground mt-2">{project.description}</p>
+              
+              {(project.githubUrl || project.demoUrl) && (
+                <div className="flex items-center gap-4 mt-4">
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      <Github className="h-4 w-4" />
+                      View Source
+                    </a>
+                  )}
+                  {project.demoUrl && (
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                      Live Demo
+                    </a>
+                  )}
+                </div>
+              )}
             </div>
 
             <div className="relative w-full rounded-lg border border-dashed border-primary/20 overflow-hidden bg-card shadow-lg" style={{ aspectRatio: '16/9', minHeight: '600px' }}>

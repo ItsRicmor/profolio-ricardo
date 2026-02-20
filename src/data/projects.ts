@@ -27,5 +27,6 @@ export const projects: Project[] = [
     playUrl: "/projects/tetris",
     demoUrl: "https://tetris.ricmor.dev/",
     iframeUrl: "https://tetris.ricmor.dev/",
+    githubUrl: "https://github.com/ItsRicmor/tetris-game",
   },
 ];

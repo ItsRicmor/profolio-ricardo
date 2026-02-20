@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ExternalLink, Play } from "lucide-react";
+import { ExternalLink, Play, Github } from "lucide-react";
 import { BaseCard } from "@/components/ui/base-card";
 import type { Project } from "@/types";
 
@@ -42,7 +42,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         ))}
       </div>
 
-      {(project.playUrl || project.demoUrl) && (
+      {(project.playUrl || project.demoUrl || project.githubUrl) && (
         <div className="mt-4 pt-4 border-t border-dashed border-border flex items-center gap-3">
           {project.playUrl && (
             <Link
@@ -60,6 +60,16 @@ export function ProjectCard({ project }: ProjectCardProps) {
               className="inline-flex items-center gap-1.5 font-mono text-[11px] text-primary hover:text-primary/80 transition-colors"
             >
               <ExternalLink className="h-3 w-3" /> landing_page
+            </a>
+          )}
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 font-mono text-[11px] text-primary hover:text-primary/80 transition-colors"
+            >
+              <Github className="h-3 w-3" /> source_code
             </a>
           )}
         </div>
