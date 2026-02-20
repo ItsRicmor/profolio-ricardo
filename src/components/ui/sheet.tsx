@@ -11,7 +11,7 @@ const SheetPortal = SheetPrimitive.Portal;
 
 interface SheetOverlayProps extends ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay> {
   className?: string;
-  ref?: React.Ref<React.ElementRef<typeof SheetPrimitive.Overlay>>;
+  ref?: React.Ref<React.ComponentRef<typeof SheetPrimitive.Overlay>>;
 }
 
 function SheetOverlay({ className, ref, ...props }: SheetOverlayProps) {
@@ -51,7 +51,7 @@ interface SheetContentProps
     VariantProps<typeof sheetVariants> {
   className?: string;
   children?: React.ReactNode;
-  ref?: React.Ref<React.ElementRef<typeof SheetPrimitive.Content>>;
+  ref?: React.Ref<React.ComponentRef<typeof SheetPrimitive.Content>>;
 }
 
 function SheetContent({ side = "right", className, children, ref, ...props }: SheetContentProps) {
@@ -76,7 +76,7 @@ function SheetHeader({ className, ...props }: React.HTMLAttributes<HTMLDivElemen
 interface SheetTitleProps extends ComponentPropsWithoutRef<typeof SheetPrimitive.Title> {
   className?: string;
   children?: React.ReactNode;
-  ref?: React.Ref<React.ElementRef<typeof SheetPrimitive.Title>>;
+  ref?: React.Ref<React.ComponentRef<typeof SheetPrimitive.Title>>;
 }
 
 function SheetTitle({ className, ref, ...props }: SheetTitleProps) {
