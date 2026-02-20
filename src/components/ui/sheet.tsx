@@ -1,21 +1,17 @@
 import * as SheetPrimitive from "@radix-ui/react-dialog";
 import { cva, type VariantProps } from "class-variance-authority";
 import { X } from "lucide-react";
-import { ComponentPropsWithoutRef, ElementRef } from "react";
+import { ComponentPropsWithoutRef } from "react";
 
 import { cn } from "@/lib/utils";
 
 const Sheet = SheetPrimitive.Root;
 
-const SheetTrigger = SheetPrimitive.Trigger;
-
-const SheetClose = SheetPrimitive.Close;
-
 const SheetPortal = SheetPrimitive.Portal;
 
 interface SheetOverlayProps extends ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay> {
   className?: string;
-  ref?: React.Ref<ElementRef<typeof SheetPrimitive.Overlay>>;
+  ref?: React.Ref<React.ElementRef<typeof SheetPrimitive.Overlay>>;
 }
 
 function SheetOverlay({ className, ref, ...props }: SheetOverlayProps) {
@@ -55,7 +51,7 @@ interface SheetContentProps
     VariantProps<typeof sheetVariants> {
   className?: string;
   children?: React.ReactNode;
-  ref?: React.Ref<ElementRef<typeof SheetPrimitive.Content>>;
+  ref?: React.Ref<React.ElementRef<typeof SheetPrimitive.Content>>;
 }
 
 function SheetContent({ side = "right", className, children, ref, ...props }: SheetContentProps) {
@@ -77,39 +73,19 @@ function SheetHeader({ className, ...props }: React.HTMLAttributes<HTMLDivElemen
   return <div className={cn("flex flex-col space-y-2 text-center sm:text-left", className)} {...props} />;
 }
 
-function SheetFooter({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
-  return <div className={cn("flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2", className)} {...props} />;
-}
-
 interface SheetTitleProps extends ComponentPropsWithoutRef<typeof SheetPrimitive.Title> {
   className?: string;
   children?: React.ReactNode;
-  ref?: React.Ref<ElementRef<typeof SheetPrimitive.Title>>;
+  ref?: React.Ref<React.ElementRef<typeof SheetPrimitive.Title>>;
 }
 
 function SheetTitle({ className, ref, ...props }: SheetTitleProps) {
   return <SheetPrimitive.Title ref={ref} className={cn("text-lg font-semibold text-foreground", className)} {...props} />;
 }
 
-interface SheetDescriptionProps extends ComponentPropsWithoutRef<typeof SheetPrimitive.Description> {
-  className?: string;
-  children?: React.ReactNode;
-  ref?: React.Ref<ElementRef<typeof SheetPrimitive.Description>>;
-}
-
-function SheetDescription({ className, ref, ...props }: SheetDescriptionProps) {
-  return <SheetPrimitive.Description ref={ref} className={cn("text-sm text-muted-foreground", className)} {...props} />;
-}
-
 export {
   Sheet,
-  SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetFooter,
   SheetHeader,
-  SheetOverlay,
-  SheetPortal,
   SheetTitle,
-  SheetTrigger,
 };

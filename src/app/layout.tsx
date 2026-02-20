@@ -3,23 +3,6 @@ import { Toaster } from "sonner";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import "@/styles/globals.css";
 
-const inlineStyles = `
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --primary: 221.2 83.2% 53.3%;
-  }
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --primary: 217.2 91.2% 59.8%;
-  }
-  body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
-  }
-`;
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://ricmor.dev"),
   title: {
@@ -72,9 +55,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <style dangerouslySetInnerHTML={{ __html: inlineStyles }} />
-      </head>
       <body suppressHydrationWarning>
         <ThemeProvider>
           <Toaster />
