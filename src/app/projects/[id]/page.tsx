@@ -21,7 +21,7 @@ export default function ProjectPlayPage({ params }: { params: Promise<{ id: stri
   }
 
   const invertedTheme = theme === 'dark' ? 'light' : 'dark';
-  const iframeUrl = `${project.iframeUrl}?theme=${invertedTheme}`;
+  const iframeUrl = `${project.iframeUrl}?theme=${invertedTheme}&hideFooter=true`;
 
   return (
     <div className="relative min-h-screen bg-background text-foreground">
