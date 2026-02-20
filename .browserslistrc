@@ -1,0 +1,8 @@
+# Browsers that we support for modern builds
+# This reduces the amount of legacy JavaScript polyfills
+
+> 0.5%
+last 2 versions
+not dead
+not ie 11
+not op_mini all

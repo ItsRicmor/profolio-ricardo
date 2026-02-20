@@ -14,6 +14,9 @@ export function HeroSection() {
           fill
           className="object-cover"
           priority
+          quality={85}
+          sizes="100vw"
+          placeholder="blur"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background from-10% via-background/60 via-40% to-transparent md:from-background md:from-5% md:via-background/80 md:via-45% md:to-background/40" />
       </div>
