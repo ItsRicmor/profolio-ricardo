@@ -12,7 +12,7 @@ describe("useScrollAnimation", () => {
     unobserveMock = vi.fn();
     disconnectMock = vi.fn();
 
-    global.IntersectionObserver = vi.fn().mockImplementation((callback) => ({
+    global.IntersectionObserver = vi.fn().mockImplementation((_callback) => ({
       observe: observeMock,
       unobserve: unobserveMock,
       disconnect: disconnectMock,

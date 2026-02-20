@@ -15,7 +15,7 @@ describe("useIsMobile", () => {
   });
 
   it("should return false for desktop viewport", () => {
-    matchMediaMock.mockImplementation((query: string) => ({
+    matchMediaMock.mockImplementation((_query: string) => ({
       matches: false,
       addEventListener: vi.fn(),
       removeEventListener: vi.fn(),
@@ -32,7 +32,7 @@ describe("useIsMobile", () => {
   });
 
   it("should return true for mobile viewport", () => {
-    matchMediaMock.mockImplementation((query: string) => ({
+    matchMediaMock.mockImplementation((_query: string) => ({
       matches: true,
       addEventListener: vi.fn(),
       removeEventListener: vi.fn(),
