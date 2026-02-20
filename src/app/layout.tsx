@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Toaster } from "sonner";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import "@/styles/globals.css";
@@ -59,6 +60,7 @@ export default function RootLayout({
         <ThemeProvider>
           <Toaster />
           {children}
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>
