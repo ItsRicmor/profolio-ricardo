@@ -19,7 +19,8 @@ export default function ProjectPlayPage({ params }: { params: Promise<{ id: stri
     notFound();
   }
 
-  const iframeUrl = `${project.iframeUrl}?theme=${theme || 'light'}`;
+  const invertedTheme = theme === 'dark' ? 'light' : 'dark';
+  const iframeUrl = `${project.iframeUrl}?theme=${invertedTheme}`;
 
   return (
     <div className="relative min-h-screen bg-background text-foreground">
@@ -77,7 +78,7 @@ export default function ProjectPlayPage({ params }: { params: Promise<{ id: stri
               )}
             </div>
 
-            <div className="relative w-full rounded-lg border border-dashed border-primary/20 overflow-hidden bg-card shadow-lg" style={{ aspectRatio: '16/9', minHeight: '600px' }}>
+            <div className="relative w-full rounded-lg border border-dashed border-primary/20 overflow-hidden bg-card shadow-lg h-[calc(100vh-16rem)] md:aspect-video md:h-auto md:min-h-[600px]">
               <iframe
                 src={iframeUrl}
                 className="w-full h-full border-0"
