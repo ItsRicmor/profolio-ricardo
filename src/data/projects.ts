@@ -1,6 +1,6 @@
 import { Project } from "@/types";
-import convoyhubPreview from "@/assets/convoyhub-preview.png";
-import kardioPreview from "@/assets/kardio-preview.png";
+import convoyhubPreview from "@/assets/convoyhub-preview.jpg";
+import kardioPreview from "@/assets/kardio-preview.jpg";
 
 export const projects: Project[] = [
   {
