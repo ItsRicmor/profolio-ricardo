@@ -82,11 +82,11 @@ export function HeroSection() {
           <h1 className="font-heading text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl">
             Ricardo Morataya
           </h1>
-          <p className="max-w-lg text-base text-foreground/70 md:text-lg leading-relaxed">
+          <p className="max-w-lg text-base text-foreground/90 md:text-lg md:text-foreground/70 leading-relaxed">
             Building <span className="text-foreground font-medium">scalable systems</span> and{" "}
             <span className="text-foreground font-medium">clean architectures</span>.
           </p>
-          <p className="max-w-md text-sm text-foreground/50">
+          <p className="max-w-md text-sm text-foreground/80 md:text-foreground/50">
             6+ years designing web applications across healthcare, compliance, and gaming platforms.
           </p>
           <div className="flex items-center gap-1 pt-3">
