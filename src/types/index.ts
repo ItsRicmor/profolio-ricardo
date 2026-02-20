@@ -8,6 +8,8 @@ export interface Project {
   demoUrl?: string;
   githubUrl?: string;
   image?: string | StaticImageData;
+  playUrl?: string;
+  iframeUrl?: string;
 }
 
 export interface Experience {

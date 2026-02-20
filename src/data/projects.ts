@@ -19,4 +19,13 @@ export const projects: Project[] = [
     demoUrl: "https://kardio.parallaxsolutions.dev/",
     image: kardioPreview,
   },
+  {
+    id: "tetris",
+    title: "Tetris",
+    description: "Classic Tetris game with modern design. Features theme switching and smooth gameplay mechanics.",
+    tags: ["Game", "TypeScript", "Interactive", "Retro"],
+    playUrl: "/projects/tetris",
+    demoUrl: "https://tetris.ricmor.dev/",
+    iframeUrl: "https://tetris.ricmor.dev/",
+  },
 ];

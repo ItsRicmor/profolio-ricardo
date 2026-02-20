@@ -15,6 +15,7 @@ const NAV_ITEMS = [
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
+  { label: "Posts", href: "#blog" },
 ];
 
 export function Navbar() {
