@@ -1,4 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
-  <rect width="180" height="180" fill="#2563eb" rx="40"/>
-  <text x="90" y="130" font-family="system-ui, -apple-system, sans-serif" font-size="100" font-weight="800" fill="white" text-anchor="middle" letter-spacing="-4">R</text>
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#3b82f6" stroke-width="0.6"/>
+    </pattern>
+    <clipPath id="roundedClip">
+      <rect width="180" height="180" rx="40"/>
+    </clipPath>
+  </defs>
+
+  <!-- Dark navy background (matches dark mode: hsl(222.2 84% 4.9%)) -->
+  <rect width="180" height="180" fill="#030a18" rx="40"/>
+
+  <!-- Blueprint grid overlay -->
+  <rect width="180" height="180" fill="url(#grid)" opacity="0.18" clip-path="url(#roundedClip)"/>
+
+  <!-- Corner architectural markers (top-left) -->
+  <path d="M 18 42 L 18 18 L 42 18" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="square" opacity="0.8"/>
+  <!-- Corner architectural markers (top-right) -->
+  <path d="M 138 18 L 162 18 L 162 42" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="square" opacity="0.8"/>
+  <!-- Corner architectural markers (bottom-left) -->
+  <path d="M 18 138 L 18 162 L 42 162" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="square" opacity="0.8"/>
+  <!-- Corner architectural markers (bottom-right) -->
+  <path d="M 138 162 L 162 162 L 162 138" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="square" opacity="0.8"/>
+
+  <!-- Architecture node dots at marker ends -->
+  <circle cx="18" cy="42" r="3" fill="#60a5fa" opacity="0.9"/>
+  <circle cx="42" cy="18" r="3" fill="#60a5fa" opacity="0.9"/>
+  <circle cx="138" cy="18" r="3" fill="#60a5fa" opacity="0.9"/>
+  <circle cx="162" cy="42" r="3" fill="#60a5fa" opacity="0.9"/>
+  <circle cx="18" cy="138" r="3" fill="#60a5fa" opacity="0.9"/>
+  <circle cx="42" cy="162" r="3" fill="#60a5fa" opacity="0.9"/>
+  <circle cx="138" cy="162" r="3" fill="#60a5fa" opacity="0.9"/>
+  <circle cx="162" cy="138" r="3" fill="#60a5fa" opacity="0.9"/>
+
+  <!-- R letter in primary blue -->
+  <text x="90" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="96" font-weight="800" fill="#60a5fa" text-anchor="middle" letter-spacing="-4">R</text>
 </svg>
